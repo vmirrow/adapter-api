@@ -8,6 +8,12 @@
 	<name>DSG Platform API</name>
 	<description />
 	<url />
+	<repositories>
+		<repository>
+			<id>jboss</id>
+			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.jboss.resteasy</groupId>
@@ -67,4 +73,23 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
